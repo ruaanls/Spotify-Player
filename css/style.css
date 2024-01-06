@@ -1,0 +1,192 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    
+}
+
+#player-all
+{
+    background-color: rgb(117, 126, 0);
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 3.15%;
+}
+#menu, #hero
+{
+    color: white;
+    width: 30vw;
+    height: 100%;
+    padding: 0.5% 0.95%;
+}
+
+#selecao, #playlist-all, #hero
+{
+    background-color: rgb(32, 32, 32);
+    border-radius: 15px;
+    padding: 2% 4%;
+    height: 100%;
+    margin: 3% 0; 
+}
+
+#playlists
+{
+    overflow-y: auto;
+    height: 52vh;
+}
+
+
+#inicio, #buscar, #biblioteca
+{
+    color: rgb(192, 191, 191);
+    display: flex;
+    align-items: center;
+    margin: 5% 0;
+    font-size: x-large;
+
+}
+
+#selecao button
+{
+    color:rgb(192, 191, 191) ;
+    background-color: rgb(32, 32, 32);
+    font-size:x-large;
+    margin-left: 5%;
+    padding: 0 3%;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#menu i, #playlist-all  i
+{
+    font-size: xx-large;
+    color: rgb(192, 191, 191);
+    cursor: pointer;
+}
+
+#playlist-all h3
+{
+    padding-left: 5%;
+    display: flex;
+    align-items: baseline;
+    
+}
+
+.playlist
+{
+    display: flex;
+    align-items: center;
+    margin: 5% 0;
+    font-size: 1.03rem;
+    cursor: pointer;
+    background-color: rgb(46, 46, 46);
+    border-radius: 5px;
+    padding: 5% 3%;
+}
+
+.playlist img
+{
+    width: 13%;
+    border-radius: 7px;
+}
+
+/* Página Inicial */
+
+
+#geral
+{
+    display: flex;
+    background-color: black;
+}
+
+#hero
+{
+    width: 64%;
+    margin: 1.5% 0;
+    padding: 3% 1.7%;
+}
+
+#painel-all > #title
+{
+    display: flex;
+    margin-bottom: 3%;
+}
+
+#painel
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-bottom: 3%;
+}
+
+.elemento-painel
+{
+    background-color: rgb(46, 46, 46);
+    width: 26%;
+    margin: 1% 0;
+    margin-right: 1.5%;
+    border-radius: 5px;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.elemento-painel img
+{
+    width: 4vw;
+    margin-right: 5%;
+    border-radius: 5px;
+}
+
+#title-musics
+{
+    margin-bottom: 2%;
+}
+
+#musicas
+{
+    display: flex;
+
+}
+
+.card
+{
+    margin-right: 1.5%;
+    background-color:rgb(46, 46, 46);
+    padding: 2%;
+    
+}
+
+.card h3
+{
+    margin-top: 10%;
+}
+
+.card p
+{
+    margin-top: 5%;
+    color: rgb(192, 191, 191);
+    font-weight: bold;
+}
+.card img
+{
+    width: 100%;
+    height: 25vh;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgb(22, 22, 22);
+    
+}
+
+
+
