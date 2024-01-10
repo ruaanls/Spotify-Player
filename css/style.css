@@ -1,27 +1,136 @@
 
+
+@font-face {
+    font-family: 'CircularSpotifyText-Light';
+    src: url('../assets/fonts/CircularSpotifyText-Light.otf') format('opentype');
+    /* Outras propriedades opcionais, como font-weight, font-style, etc. */
+}
 *
 {
     margin: 0;
     padding: 0;
-    font-family: arial;
+    font-family: 'CircularSpotifyText-Light';
     
 }
 
 #player-all
 {
-    background-color: rgb(117, 126, 0);
+    background-color: black;
     position: sticky;
     bottom: 0;
     width: 100%;
     height: 100%;
     padding-top: 3.15%;
 }
-#menu, #hero
+
+#header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 ;
+    padding: 0.8%;
+    padding-left: 1.5%;
+    border-radius: 8px;
+    position: sticky;
+    top: 0;
+    background-color: rgb(34, 34, 34);
+}
+
+#navegaçao
+{
+    display: flex;
+    align-items: center;
+    max-width: 3rem;
+}
+
+#navegacao > i
+{
+    border-radius: 100px;
+    background-color: rgb(39, 39, 39);
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: rgb(192, 191, 191);
+    cursor: pointer;
+    margin-right: 5px;
+    
+}
+#opcoes
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 65%;
+}
+#opcoes > button
+{
+    border-radius: 50px;
+    padding: 1.5% 4%;
+    margin-right: 1%;
+    font-size: 14px;
+    font-weight: 900;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+}
+#opcoes > #premium
+{
+    background-color: rgb(235, 235, 235);
+    color: black;
+}
+
+#opcoes > #download
+{
+    background-color: rgb(20, 20, 20);
+    color: rgb(235, 235, 235);
+    display: flex;
+    align-items: center;
+}
+
+#download > i
+{
+    border: 3px solid rgb(235, 235, 235);
+    border-radius: 100px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: large;
+}
+
+#opcoes > #notificacoes
+{
+    padding: 1%;
+    border-radius: 100px;
+    font-size: large;
+    background-color: rgb(20, 20, 20);
+    color: rgb(235, 235, 235);
+    display: flex;
+    align-items: center;
+}
+#user 
+{
+    width: 20%;
+    height: 10%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+#user > img
+{
+    width: 3vw;
+    height: 50%;
+    border-radius: 150px;
+    border: 5px solid black;
+}
+#menu
 {
     color: white;
-    width: 30vw;
+    width: 27vw;
     height: 100%;
-    padding: 0.5% 0.95%;
+    padding: 0.3% 0.95%;
+    position: sticky;
+    top: 0;
+    
 }
 
 #selecao, #playlist-all, #hero
@@ -33,10 +142,17 @@
     margin: 3% 0; 
 }
 
+#playlist-all
+{
+    padding-bottom: 5%;
+    position: sticky;
+}
+
 #playlists
 {
     overflow-y: auto;
     height: 52vh;
+    
 }
 
 
@@ -46,15 +162,21 @@
     display: flex;
     align-items: center;
     margin: 5% 0;
-    font-size: x-large;
+    font-size: large;
 
+}
+
+#biblioteca
+{
+    font-size: medium;
+    cursor: pointer;
 }
 
 #selecao button
 {
     color:rgb(192, 191, 191) ;
     background-color: rgb(32, 32, 32);
-    font-size:x-large;
+    font-size:1.25rem;
     margin-left: 5%;
     padding: 0 3%;
     border: none;
@@ -70,13 +192,8 @@
     cursor: pointer;
 }
 
-#playlist-all h3
-{
-    padding-left: 5%;
-    display: flex;
-    align-items: baseline;
-    
-}
+
+
 
 .playlist
 {
@@ -85,10 +202,37 @@
     margin: 5% 0;
     font-size: 1.03rem;
     cursor: pointer;
-    background-color: rgb(46, 46, 46);
+    background-color: rgb(34, 34, 34);
     border-radius: 5px;
     padding: 5% 3%;
+    
 }
+
+.playlist > .subtitle
+{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+#playlist-all p
+{
+    color: rgb(192, 191, 191);
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+#playlist-all h3, #playlist-all p
+{
+    padding-left: 1rem;
+    display: flex;
+    align-items: baseline;
+    white-space: nowrap;
+    
+}
+
+
 
 .playlist img
 {
@@ -107,9 +251,21 @@
 
 #hero
 {
-    width: 64%;
-    margin: 1.5% 0;
-    padding: 3% 1.7%;
+    width: 75%;
+    margin: 1.3% 0;
+    margin-right: 0.5%;
+    padding: 0;
+    padding-bottom: 10%;
+    
+    color: white;
+    
+}
+
+#painel-all
+{
+    
+    padding: 1% 1.8%;
+    margin-bottom: 2%;
 }
 
 #painel-all > #title
@@ -123,17 +279,18 @@
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    margin-bottom: 3%;
+    margin-bottom: 1%;
+    
 }
 
 .elemento-painel
 {
     background-color: rgb(46, 46, 46);
-    width: 26%;
+    width: 29%;
     margin: 1% 0;
     margin-right: 1.5%;
     border-radius: 5px;
-    padding: 2%;
+    padding: 1%;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -141,17 +298,20 @@
 
 .elemento-painel img
 {
-    width: 4vw;
+    width: 3.5vw;
     margin-right: 5%;
     border-radius: 5px;
 }
-
+#musicas-all, #artistas-all, #populares-all
+{
+    padding: 0 2%;
+}
 #title-musics
 {
     margin-bottom: 2%;
 }
 
-#musicas
+#musicas, #artistas, #populares
 {
     display: flex;
 
@@ -160,14 +320,21 @@
 .card
 {
     margin-right: 1.5%;
-    background-color:rgb(46, 46, 46);
+    background-color:rgb(36, 36, 36);
     padding: 2%;
+    padding-bottom: 2%;
+    border-radius: 8px;
+    width: 50%;
+    margin-bottom: 1%;
     
 }
 
 .card h3
 {
-    margin-top: 10%;
+    margin-top: 17%;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card p
@@ -179,14 +346,33 @@
 .card img
 {
     width: 100%;
-    height: 25vh;
+    height: 64%;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 5px 5px 10px rgb(22, 22, 22);
+    box-shadow: -10px 10px 10px rgb(22, 22, 22);
     
 }
+
+.card  .artista
+{
+    border-radius: 100px;
+    height: 60%;
+
+}
+
+#title-artistas, #title-populares
+{
+    margin: 3% 0;
+}
+
+#populares > .card > .artista
+{
+    border-radius: 100px;
+    height: 55%;
+}
+
 
 
 
