@@ -8,6 +8,8 @@
     <title>Web Player</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/spotify.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 
 </head>
@@ -270,31 +272,45 @@
     </div>
 
     <section id="player-all">
-        <div id="info-musica">
-            <div id="img-music">
-                <img src="" alt="">
+        <article id="musica-player">
+            <img src="/assets/img/1989 tv.jpg" alt="Album">
+            <div id="infos-musica">
+                <p id="titulo-musica">Nome Música</p>
+                <p>Artista</p>
             </div>
-            <h3>NONE</h3>
-        </div>
+            <button><i class="bi bi-heart botao-medio"></i></button>
+        </article>
+
+        <article id="player">
+            <div id="botoes">
+                <button><i class="bi bi-shuffle botao-grande aleatorio"></i></button>
+                <button><i class="bi bi-skip-start-fill botao-grande"></i></button>
+                <button><i class="bi bi-play-circle-fill botao-grande play"></i></button>
+                <button><i class="bi bi-skip-end-fill botao-grande "></i></button>
+                <button><i class="bi bi-repeat botao-grande repetir"></i></button>
+                <audio id="som" src="/assets/songs/Taylor-Swift-New-Romantics.mp3"></audio>
+            </div>
+            <div id="barraprogreco">
+                <div id="barraconcluida">
+                    
+                </div>
+            </div>
+        </article>
+
+        <article id="opcoes-player">
+            <button><i class="bi bi-music-note-beamed botao-medio"></i></button>
+            <button><i class="bi bi-list botao-medio"></i></button>
+            <button><i class="bi bi-volume-down-fill botao-medio"></i></button>
+            <div id="volume-base">
+                <div id="volume-atual">
+
+                </div>
+            </div>
+        </article>
 
     </section>
-
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
 
-
-
-<!--
-                    <div class="card">
-                        <img src="/assets/img/bruninho.jpg" alt="" class="artista">
-                        <h3>Bruno Mars</h3>
-                        <p>Artista</p>
-                    </div>
-
-                    <div class="card">
-                        <img src="/assets/img/revelacao.jpg" alt="" class="artista">
-                        <h3>Grupo Revelação</h3>
-                        <p>Artista</p>
-                    </div>
-                    -->
