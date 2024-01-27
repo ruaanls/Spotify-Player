@@ -26,7 +26,7 @@
     border-radius: 8px;
     position: sticky;
     top: 0;
-    background-color: rgb(34, 34, 34);
+    background-color:#121212;
 }
 
 #navegaçao
@@ -39,7 +39,7 @@
 #navegacao > i
 {
     border-radius: 100px;
-    background-color: rgb(39, 39, 39);
+    background-color: #0A0A0A;
     font-size: 2.25rem;
     font-weight: 300;
     color: rgb(192, 191, 191);
@@ -73,7 +73,7 @@
 
 #opcoes > #download
 {
-    background-color: rgb(20, 20, 20);
+    background-color: black;
     color: rgb(235, 235, 235);
     display: flex;
     align-items: center;
@@ -94,7 +94,7 @@
     padding: 1%;
     border-radius: 100px;
     font-size: large;
-    background-color: rgb(20, 20, 20);
+    background-color: #0A0A0A;
     color: rgb(235, 235, 235);
     display: flex;
     align-items: center;
@@ -114,6 +114,8 @@
     border-radius: 150px;
     border: 5px solid black;
 }
+
+
 #menu
 {
     color: white;
@@ -127,7 +129,7 @@
 
 #selecao, #playlist-all, #hero
 {
-    background-color: rgb(32, 32, 32);
+    background-color:#121212;
     border-radius: 15px;
     padding: 2% 4%;
     height: 100%;
@@ -154,21 +156,19 @@
     display: flex;
     align-items: center;
     margin: 5% 0;
-    font-size: large;
-
 }
 
 #biblioteca
 {
-    font-size: medium;
+    font-size: 1rem;
     cursor: pointer;
 }
 
 #selecao button
 {
     color:rgb(192, 191, 191) ;
-    background-color: rgb(32, 32, 32);
-    font-size:1.25rem;
+    background-color: #121212;
+    font-size:1.15rem;
     margin-left: 5%;
     padding: 0 3%;
     border: none;
@@ -192,12 +192,12 @@
     display: flex;
     align-items: center;
     margin: 5% 0;
-    font-size: 1.03rem;
+    font-size: 0.9rem;
     cursor: pointer;
-    background-color: rgb(34, 34, 34);
+    background-color: #151515;
     border-radius: 5px;
     padding: 5% 3%;
-    
+    width: 92%;
 }
 
 .playlist > .subtitle
@@ -248,12 +248,12 @@
     margin-right: 0.5%;
     padding: 0;
     padding-bottom: 10%;
-    
+    font-size: 1rem;
     color: white;
     
 }
 
-#hero h2
+#hero #painel-all > #title h2
 {
     color: white;
     font-size: 1.6rem;
@@ -270,6 +270,7 @@
 {
     display: flex;
     margin-bottom: 1%;
+
 }
 
 #painel
@@ -283,9 +284,9 @@
 
 .elemento-painel
 {
-    background-color: rgb(46, 46, 46);
+    background-color: #2B2B2B;
     width: 29%;
-    
+    height: 6vh;
     margin: 1% 0;
     margin-right: 1.5%;
     border-radius: 5px;
@@ -293,7 +294,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .elemento-painel img
@@ -306,9 +307,10 @@
 {
     padding: 0 2%;
 }
-#title-musics
+#title-musics, #title-artistas, #title-populares
 {
     margin-bottom: 2%;
+    font-size: 0.9rem;
 }
 
 #musicas, #artistas, #populares
@@ -320,7 +322,7 @@
 .card
 {
     margin-right: 1.5%;
-    background-color:rgb(36, 36, 36);
+    background-color:#181818;
     padding: 2%;
     padding-bottom: 2%;
     border-radius: 8px;
@@ -332,7 +334,7 @@
 .card h3
 {
     margin-top: 17%;
-    
+    font-size: 1.1rem;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -342,6 +344,7 @@
     margin-top: 5%;
     color: rgb(192, 191, 191);
     font-weight: bold;
+    font-size: 0.9rem;
 }
 .card img
 {
@@ -381,10 +384,11 @@
     position: sticky;
     bottom: 0;
     width: 100%;
-    padding: 1.5% 0;
+    padding: 1% 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 #player-all button
@@ -397,23 +401,19 @@
 #player-all i
 {
     color: rgb(192, 191, 191);
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 
-#botoes > .aleatorio, #botoes > .repetir
-{
-    font-size: 1.3rem;
-}
 
 #player-all button .botao-grande
 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
 }
 
 #botoes > button > .aleatorio, #botoes > button > .repetir
 {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
 }
 
 .botao-medio
@@ -444,29 +444,33 @@
 
 #musica-player img
 {
-    width: 10vw;
-    height: 9vh;
+    width: 5vw;
+    height: 10vh;
     border-radius: 5px;
 }
 
-#musica-player i
-{
-    margin: 0;
-}
+
 
 
 #infos-musica
 {
     margin: 0 0.9rem;
     margin-right: 10px;
+    height: 8%;
+    width: 10vw;
 }
 
 #titulo-musica
 {
     color: white;
     font-weight: 600;
-    font-size: 0.95rem;
-    width: 20vw;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+#infos-musica > #artista
+{
+    font-size: 0.8rem;
 }
 
 
@@ -481,10 +485,11 @@
 {
     
     background-color: rgb(124, 124, 124);
-    height: 3px;
+    height: 4px;
     width: 35vw;
     border-radius: 10px;
     margin-top: 1.5%;
+    cursor: pointer;
 }
 
 #barraconcluida
@@ -492,10 +497,18 @@
     height: inherit;
     background-color: white;
     border-radius: 10px;
-    width: 50%;
-    
+    --progresso: 0%;
+    width: var(--progresso);
+    cursor: pointer;
     
 }
+
+#progressoContainer
+{
+    padding: 5px 0;
+    cursor: pointer;
+}
+
 
 #opcoes-player
 {
@@ -503,7 +516,11 @@
     display: flex;
     align-items: center;
 }
-
+#volume-icon i
+{
+    font-size: 1.9rem;
+    margin-right: 5px;
+}
 #volume-base
 {
     background-color: rgb(124, 124, 124);

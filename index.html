@@ -130,7 +130,7 @@
                     </div>
 
                     <div class="elemento-painel">
-                        <img src="/assets/img/bmth.jpg" alt="">
+                        <img src="/assets/img/drown.jpg" alt="">
                         <h3>That's The Spirit</h3>
                     </div>
 
@@ -145,7 +145,7 @@
                     </div>
 
                     <div class="elemento-painel">
-                        <img src="/assets/img/manifesto.jpg" alt="">
+                        <img src="/assets/img/acordo.jpg" alt="">
                         <h3>Manifesto Músical (Ao Vivo) </h3>
                     </div>
                 </div>
@@ -158,7 +158,7 @@
 
                 <div id="musicas">
                     <div class="card">
-                        <img src="/assets/img/1989 tv.jpg" alt="">
+                        <img src="/assets/img/newRomantics.jpg" alt="">
                         <h3>1989 (Taylor's Version) </h3>
                         <p>Taylor Swift</p>
                     </div>
@@ -222,7 +222,7 @@
                     </div>
 
                     <div class="card">
-                        <img src="/assets/img/MCR.jpg" alt="" class="artista">
+                        <img src="/assets/img/teenagers.jpg" alt="" class="artista">
                         <h3>My Chemical Romance</h3>
                         <p>Artista</p>
                     </div>
@@ -273,10 +273,10 @@
 
     <section id="player-all">
         <article id="musica-player">
-            <img src="/assets/img/1989 tv.jpg" alt="Album">
+            <img src="" alt="Capa do Album" id="capaAlbum">
             <div id="infos-musica">
                 <p id="titulo-musica">Nome Música</p>
-                <p>Artista</p>
+                <p id="artista">Artista</p>
             </div>
             <button><i class="bi bi-heart botao-medio"></i></button>
         </article>
@@ -284,23 +284,26 @@
         <article id="player">
             <div id="botoes">
                 <button><i class="bi bi-shuffle botao-grande aleatorio"></i></button>
-                <button><i class="bi bi-skip-start-fill botao-grande"></i></button>
+                <button id="voltar"><i class="bi bi-skip-start-fill botao-grande"></i></button>
                 <button><i class="bi bi-play-circle-fill botao-grande play"></i></button>
-                <button><i class="bi bi-skip-end-fill botao-grande "></i></button>
+                <button id="avancar"><i class="bi bi-skip-end-fill botao-grande "></i></button>
                 <button><i class="bi bi-repeat botao-grande repetir"></i></button>
-                <audio id="som" src="/assets/songs/Taylor-Swift-New-Romantics.mp3"></audio>
+                <audio id="som"></audio>
             </div>
-            <div id="barraprogreco">
-                <div id="barraconcluida">
-                    
+            <div id="progressoContainer">
+                <div id="barraprogreco">
+                    <div id="barraconcluida">
+                        
+                    </div>
                 </div>
             </div>
+            
         </article>
 
         <article id="opcoes-player">
             <button><i class="bi bi-music-note-beamed botao-medio"></i></button>
             <button><i class="bi bi-list botao-medio"></i></button>
-            <button><i class="bi bi-volume-down-fill botao-medio"></i></button>
+            <button id="volume-icon"><i class="bi bi-volume-down-fill botao-medio "></i></button>
             <div id="volume-base">
                 <div id="volume-atual">
 
