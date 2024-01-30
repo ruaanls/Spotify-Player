@@ -7,6 +7,11 @@ const anterior = document.querySelector("#voltar");
 const proximo = document.querySelector("#avancar")
 const barraProgreco = document.querySelector('#barraconcluida');
 const barraGeral = document.querySelector('#progressoContainer')
+const volumeAtual = document.querySelector("#volume-atual");
+const volumeGeral = document.querySelector("#volume-container");
+const iconVolume = document.querySelector(".volume-icon");
+const ponteiro = document.querySelector(".bi-circle-fill");
+const ponteiro2 = document.querySelector(".diferente");
 
 /* Objetos das Músicas (Total = 12 Músicas) */
 
@@ -100,7 +105,8 @@ const playlist = [newRomantics, articMonkeys, comeLittleCloser, orphans, teenage
 let index = 0;
 let indexTocadas = [];
 
-let estaTocando = false; /* Valor padrão da variável de verificação do estado atual do player de músicas */
+let estaTocando = false;
+let mouse = false; /* Valor padrão da variável de verificação do estado atual do player de músicas */
 
 
 /* Funções referentes ao player de música */ 
@@ -193,13 +199,80 @@ function irPara(event)
     const irParaTempo = (posicaoAtual/width) * musica.duration;
     musica.currentTime = irParaTempo;
 }
+
+function alterarVolume(event)
+{
+    const width = volumeGeral.clientWidth;
+    const locEvento = event.offsetX;
+    const novoVolume = (locEvento * 100 / width);
+    volumeAtual.style.setProperty('--volumeProgresso',`${novoVolume}%`);
+    musica.volume = novoVolume/100;
+    if (musica.volume == 0)
+    {
+        iconVolume.classList.remove("bi-volume-down-fill");
+        iconVolume.classList.remove("bi-volume-up-fill");
+        iconVolume.classList.add("bi-volume-mute-fill");
+    }
+
+    else if (musica.volume > 0.7)
+    {
+        iconVolume.classList.remove("bi-volume-down-fill");
+        iconVolume.classList.remove("bi-volume-mute-fill");
+        iconVolume.classList.add("bi-volume-up-fill");
+    } 
+
+    else
+    {
+        iconVolume.classList.remove("bi-volume-up-fill");
+        iconVolume.classList.remove("bi-volume-mute-fill");
+        iconVolume.classList.add("bi-volume-down-fill");
+    }
+
+}
+
+function ponteiroBarraOn()
+{
+    ponteiro.classList.add("bi-circle-fill");
+}
+
+function ponteiroBarraOff()
+{
+    ponteiro.classList.remove("bi-circle-fill");
+}
+
+function ponteiro2VolumeOn()
+{
+    ponteiro2.classList.add("bi-circle-fill")
+}
+
+function ponteiro2VolumeOff()
+{
+    ponteiro2.classList.remove("bi-circle-fill")
+}
 /* Começo do código */ 
 
 carregarMusica();
+ponteiro.classList.remove("bi-circle-fill");
+ponteiro2.classList.remove("bi-circle-fill");
+
+
 play.addEventListener("click",playPause);
 anterior.addEventListener("click",voltarMusica);
 proximo.addEventListener("click",avancarMusica);
 musica.addEventListener("timeupdate",barraConcluida);
 barraGeral.addEventListener("click",irPara);
-musica.volume = 0.4;
+barraGeral.addEventListener("mouseover", ponteiroBarraOn);
+barraGeral.addEventListener("mouseout",ponteiroBarraOff);
+volumeGeral.addEventListener("click",alterarVolume);
+volumeGeral.addEventListener("mouseover",ponteiro2VolumeOn);
+volumeGeral.addEventListener("mouseout",ponteiro2VolumeOff);
+
+
+
+
+
+/*ponteiro.addEventListener("mouseover",ponteiroOn);
+ponteiro.addEventListener("mouseout",ponteiroOff);*/
+
+musica.volume = 0.5;
 

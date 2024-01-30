@@ -509,6 +509,27 @@
     cursor: pointer;
 }
 
+#barraconcluida:hover, #volume-atual:hover
+{
+    background-color: #1DB954;
+    
+    
+}
+
+.ponteiro, .diferente
+{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-left: 0 !important;
+    margin-bottom: 10rem;
+    height: 5px;
+    font-size: 0.8rem;
+    
+}
+
+
 
 #opcoes-player
 {
@@ -524,16 +545,18 @@
 #volume-base
 {
     background-color: rgb(124, 124, 124);
-    height: 3px;
+    height: 4px;
     width: 8vw;
     border-radius: 10px;
     margin-bottom: 4px;
+    cursor: pointer;
 }
 
 #volume-atual
 {
     height: inherit;
-    width: 50%;
+    --volumeProgresso: 50%;
+    width: var(--volumeProgresso);
     background-color: white;
     border-radius: 10px;
 }
