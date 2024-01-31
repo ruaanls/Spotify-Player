@@ -10,9 +10,147 @@
     margin: 0;
     padding: 0;
     font-family: 'CircularSpotifyText-Light';
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+#menu
+{
+    color: white;
+    width: 23vw;
+    height: 100%;
+    padding: 0.3% 0.95%;
+    position: sticky;
+    top: 0;
     
 }
 
+#selecao, #playlist-all, #hero
+{
+    background-color:#121212;
+    border-radius: 15px;
+    padding: 2% 4%;
+    height: 100%;
+    margin: 3% 0; 
+}
+
+
+#playlist-all
+{
+    padding-bottom: 5%;
+    position: sticky;
+}
+
+#playlists
+{
+    overflow-y: auto;
+    height: 52vh;
+    
+}
+
+
+#inicio, #buscar, #biblioteca
+{
+    color: rgb(192, 191, 191);
+    display: flex;
+    align-items: center;
+    margin: 5% 0;
+    
+}
+
+#inicio button, #buscar button
+{
+    transition: color 0.14s ease-in-out;
+}
+
+#inicio button:hover, #buscar button:hover, #biblioteca:hover
+{
+    color: white;
+}
+
+#biblioteca
+{
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.14s ease-in-out;
+}
+
+#selecao button
+{
+    color:rgb(192, 191, 191) ;
+    background-color: #121212;
+    font-size:1.15rem;
+    margin-left: 5%;
+    padding: 0 3%;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#menu i, #playlist-all  i
+{
+    font-size: xx-large;
+    color: rgb(192, 191, 191);
+    cursor: pointer;
+}
+
+
+
+
+.playlist
+{
+    display: flex;
+    align-items: center;
+    margin: 5% 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-color: #151515;
+    border-radius: 5px;
+    padding: 5% 3%;
+    width: 92%;
+    transition: background-color 70ms ease-in;
+}
+
+.playlist:hover
+{
+    background-color: #222222;
+}
+
+.playlist > .subtitle
+{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+#playlist-all p
+{
+    color: rgb(192, 191, 191);
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+#playlist-all h3, #playlist-all p
+{
+    padding-left: 1rem;
+    display: flex;
+    align-items: baseline;
+    white-space: nowrap;
+    
+}
+
+
+
+.playlist img
+{
+    width: 13%;
+    border-radius: 7px;
+}
 
 
 #header
@@ -29,6 +167,10 @@
     background-color:#121212;
 }
 
+#premium:hover, #download:hover, #notificacoes:hover, #user:hover
+{
+    transform: scale(1.06);
+}
 #navegaçao
 {
     display: flex;
@@ -69,6 +211,7 @@
 {
     background-color: rgb(235, 235, 235);
     color: black;
+    transition: transform 0.14s ease-in-out;
 }
 
 #opcoes > #download
@@ -77,6 +220,7 @@
     color: rgb(235, 235, 235);
     display: flex;
     align-items: center;
+    transition: transform 0.14s ease-in-out;
 }
 
 #download > i
@@ -98,6 +242,7 @@
     color: rgb(235, 235, 235);
     display: flex;
     align-items: center;
+    transition: transform 0.14s ease-in-out;
 }
 #user 
 {
@@ -106,6 +251,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    transition: transform 0.14s ease-in-out;
 }
 #user > img
 {
@@ -115,122 +261,6 @@
     border: 5px solid black;
 }
 
-
-#menu
-{
-    color: white;
-    width: 23vw;
-    height: 100%;
-    padding: 0.3% 0.95%;
-    position: sticky;
-    top: 0;
-    
-}
-
-#selecao, #playlist-all, #hero
-{
-    background-color:#121212;
-    border-radius: 15px;
-    padding: 2% 4%;
-    height: 100%;
-    margin: 3% 0; 
-}
-
-#playlist-all
-{
-    padding-bottom: 5%;
-    position: sticky;
-}
-
-#playlists
-{
-    overflow-y: auto;
-    height: 52vh;
-    
-}
-
-
-#inicio, #buscar, #biblioteca
-{
-    color: rgb(192, 191, 191);
-    display: flex;
-    align-items: center;
-    margin: 5% 0;
-}
-
-#biblioteca
-{
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-#selecao button
-{
-    color:rgb(192, 191, 191) ;
-    background-color: #121212;
-    font-size:1.15rem;
-    margin-left: 5%;
-    padding: 0 3%;
-    border: none;
-    box-shadow: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-#menu i, #playlist-all  i
-{
-    font-size: xx-large;
-    color: rgb(192, 191, 191);
-    cursor: pointer;
-}
-
-
-
-
-.playlist
-{
-    display: flex;
-    align-items: center;
-    margin: 5% 0;
-    font-size: 0.9rem;
-    cursor: pointer;
-    background-color: #151515;
-    border-radius: 5px;
-    padding: 5% 3%;
-    width: 92%;
-}
-
-.playlist > .subtitle
-{
-    display: flex;
-    flex-direction: column;
-    
-    
-}
-
-#playlist-all p
-{
-    color: rgb(192, 191, 191);
-    font-weight: bold;
-    margin-top: 5%;
-}
-
-#playlist-all h3, #playlist-all p
-{
-    padding-left: 1rem;
-    display: flex;
-    align-items: baseline;
-    white-space: nowrap;
-    
-}
-
-
-
-.playlist img
-{
-    width: 13%;
-    border-radius: 7px;
-}
 
 /* Página Inicial */
 
@@ -284,7 +314,7 @@
 
 .elemento-painel
 {
-    background-color: #2B2B2B;
+    background-color: rgb(30, 30, 30,80%);
     width: 29%;
     height: 6vh;
     margin: 1% 0;
@@ -295,6 +325,7 @@
     align-items: center;
     cursor: pointer;
     font-size: 0.85rem;
+    transition: background-color 270ms ease;
 }
 
 .elemento-painel img
@@ -302,6 +333,12 @@
     width: 3.3vw;
     margin-right: 5%;
     border-radius: 5px;
+}
+
+.elemento-painel:hover
+{
+    background-color: #464646;
+    
 }
 #musicas-all, #artistas-all, #populares-all
 {
@@ -328,7 +365,13 @@
     border-radius: 8px;
     width: 50%;
     margin-bottom: 1%;
-    
+    cursor: pointer;
+    transition: background-color 165ms ease-in;
+}
+
+.card:hover
+{
+    background-color: #252525;
 }
 
 .card h3
@@ -428,6 +471,16 @@
     font-size: 2.5rem;
 }
 
+.playVerde
+{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-left: 6rem;
+    font-size: 2.5rem;
+    color:#1DB954;
+    cursor: pointer;
+}
 
 #player, #musica-player, #opcoes-player, #botoes
 {

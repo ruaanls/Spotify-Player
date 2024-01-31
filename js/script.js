@@ -12,6 +12,7 @@ const volumeGeral = document.querySelector("#volume-container");
 const iconVolume = document.querySelector(".volume-icon");
 const ponteiro = document.querySelector(".bi-circle-fill");
 const ponteiro2 = document.querySelector(".diferente");
+const playVerde = document.querySelector(".playVerde");
 
 /* Objetos das Músicas (Total = 12 Músicas) */
 
@@ -249,11 +250,14 @@ function ponteiro2VolumeOff()
 {
     ponteiro2.classList.remove("bi-circle-fill")
 }
+
+
 /* Começo do código */ 
 
 carregarMusica();
 ponteiro.classList.remove("bi-circle-fill");
 ponteiro2.classList.remove("bi-circle-fill");
+
 
 
 play.addEventListener("click",playPause);
