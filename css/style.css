@@ -13,6 +13,11 @@
     scroll-behavior: smooth;
 }
 
+a
+{
+    text-decoration: none;
+    color: #c0bfbf;
+}
 
 
 
@@ -325,7 +330,7 @@
     align-items: center;
     cursor: pointer;
     font-size: 0.85rem;
-    transition: background-color 270ms ease;
+    transition: background-color 120ms ease;
 }
 
 .elemento-painel img
@@ -335,11 +340,17 @@
     border-radius: 5px;
 }
 
+.elemento-painel h3
+{
+    width: 70%;
+}
+
 .elemento-painel:hover
 {
-    background-color: #464646;
+    background-color: rgb(65, 65, 65,50%);
     
 }
+
 #musicas-all, #artistas-all, #populares-all
 {
     padding: 0 2%;
@@ -366,7 +377,7 @@
     width: 50%;
     margin-bottom: 1%;
     cursor: pointer;
-    transition: background-color 165ms ease-in;
+    transition: background-color 120ms ease-in;
 }
 
 .card:hover
@@ -443,7 +454,7 @@
 
 #player-all i
 {
-    color: rgb(192, 191, 191);
+    color: #c0bfbf;
     margin-left: 20px;
 }
 
@@ -471,16 +482,14 @@
     font-size: 2.5rem;
 }
 
-.playVerde
+button .like, button .repetir
 {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    margin-left: 6rem;
-    font-size: 2.5rem;
-    color:#1DB954;
-    cursor: pointer;
+    --cor: #c0bfbf;
+    color: var(--cor) !important; 
+    
+    
 }
+
 
 #player, #musica-player, #opcoes-player, #botoes
 {
@@ -526,8 +535,6 @@
     font-size: 0.8rem;
 }
 
-
-
 #player
 {
     display: flex;
@@ -559,7 +566,7 @@
 #progressoContainer
 {
     padding: 5px 0;
-    cursor: pointer;
+    
 }
 
 #barraconcluida:hover, #volume-atual:hover
@@ -593,17 +600,20 @@
 #volume-icon i
 {
     font-size: 1.9rem;
-    margin-right: 5px;
+    margin-right: 13px;
+
 }
 #volume-base
 {
     background-color: rgb(124, 124, 124);
-    height: 4px;
+    height: 5px;
     width: 8vw;
     border-radius: 10px;
     margin-bottom: 4px;
     cursor: pointer;
 }
+
+
 
 #volume-atual
 {
