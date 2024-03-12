@@ -220,11 +220,7 @@ function alterarVolume(event)
     const locEvento = event.offsetX;
     const width = volumeGeral.clientWidth;
 
-    if (voltouMute == true)
-    {
-        locEvento = 0;
-        volumeAtual.style.setProperty("--volumeProgresso", `${(novoVolume / width) * 100}%`);
-    }
+
     // Limita a largura máxima e mínima para evitar problemas visuais
     const novoVolume = Math.max(0, Math.min(locEvento, width));
 
@@ -260,16 +256,18 @@ function mute() {
         iconVolume.classList.add("bi-volume-mute-fill");
         ultimoVolume = musica.volume; // Salva o último volume antes de mutar
         musica.volume = 0;
+        quantMute+=1
         
     } else {
         // Se quantMute for ímpar, significa que está em mute, então restaure o último volume
         musica.volume = ultimoVolume; // Restaura o último volume registrado
         voltouMute = true;
         alterarVolume(ultimoVolume)
+        quantMute+=1;
     }
 
     // Atualiza o estado de mute
-    quantMute += 1;
+    
 }
 
 
