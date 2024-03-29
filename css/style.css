@@ -403,7 +403,7 @@ a
 .card img
 {
     width: 100%;
-    height: 60%;
+    
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -415,7 +415,7 @@ a
 .card  .artista
 {
     border-radius: 100px;
-    height: 60%;
+    height: auto;
 
 }
 
@@ -427,7 +427,7 @@ a
 #populares > .card > .artista
 {
     border-radius: 100px;
-    height: 55%;
+    
 }
 
 #player-all
@@ -507,7 +507,6 @@ button .like, button .repetir
 #musica-player img
 {
     width: 5vw;
-    height: 10vh;
     border-radius: 5px;
 }
 
