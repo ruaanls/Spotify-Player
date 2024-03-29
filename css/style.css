@@ -1,0 +1,626 @@
+
+
+@font-face {
+    font-family: 'CircularSpotifyText-Light';
+    src: url('../assets/fonts/CircularSpotifyText-Light.otf') format('opentype');
+    /* Outras propriedades opcionais, como font-weight, font-style, etc. */
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'CircularSpotifyText-Light';
+    scroll-behavior: smooth;
+}
+
+a
+{
+    text-decoration: none;
+    color: #c0bfbf;
+}
+
+
+
+
+#menu
+{
+    color: white;
+    width: 23vw;
+    height: 100%;
+    padding: 0.3% 0.95%;
+    position: sticky;
+    top: 0;
+    
+}
+
+#selecao, #playlist-all, #hero
+{
+    background-color:#121212;
+    border-radius: 15px;
+    padding: 2% 4%;
+    height: 100%;
+    margin: 3% 0; 
+}
+
+
+#playlist-all
+{
+    padding-bottom: 5%;
+    position: sticky;
+}
+
+#playlists
+{
+    overflow-y: auto;
+    height: 52vh;
+    
+}
+
+
+#inicio, #buscar, #biblioteca
+{
+    color: rgb(192, 191, 191);
+    display: flex;
+    align-items: center;
+    margin: 5% 0;
+    
+}
+
+#inicio button, #buscar button
+{
+    transition: color 0.14s ease-in-out;
+}
+
+#inicio button:hover, #buscar button:hover, #biblioteca:hover
+{
+    color: white;
+}
+
+#biblioteca
+{
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.14s ease-in-out;
+}
+
+#selecao button
+{
+    color:rgb(192, 191, 191) ;
+    background-color: #121212;
+    font-size:1.15rem;
+    margin-left: 5%;
+    padding: 0 3%;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#menu i, #playlist-all  i
+{
+    font-size: xx-large;
+    color: rgb(192, 191, 191);
+    cursor: pointer;
+}
+
+
+
+
+.playlist
+{
+    display: flex;
+    align-items: center;
+    margin: 5% 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-color: #151515;
+    border-radius: 5px;
+    padding: 5% 3%;
+    width: 92%;
+    transition: background-color 70ms ease-in;
+}
+
+.playlist:hover
+{
+    background-color: #222222;
+}
+
+.playlist > .subtitle
+{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+#playlist-all p
+{
+    color: rgb(192, 191, 191);
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+#playlist-all h3, #playlist-all p
+{
+    padding-left: 1rem;
+    display: flex;
+    align-items: baseline;
+    white-space: nowrap;
+    
+}
+
+
+
+.playlist img
+{
+    width: 13%;
+    border-radius: 7px;
+}
+
+
+#header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 ;
+    padding: 0.8%;
+    padding-left: 1.5%;
+    border-radius: 8px;
+    position: sticky;
+    top: 0;
+    background-color:#121212;
+}
+
+#premium:hover, #download:hover, #notificacoes:hover, #user:hover
+{
+    transform: scale(1.06);
+}
+#navegaçao
+{
+    display: flex;
+    align-items: center;
+    max-width: 3rem;
+}
+
+#navegacao > i
+{
+    border-radius: 100px;
+    background-color: #0A0A0A;
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: rgb(192, 191, 191);
+    cursor: pointer;
+    margin-right: 5px;
+    
+}
+#opcoes
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 65%;
+}
+#opcoes > button
+{
+    border-radius: 50px;
+    padding: 1.5% 4%;
+    margin-right: 1%;
+    font-size: 14px;
+    font-weight: 900;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+}
+#opcoes > #premium
+{
+    background-color: rgb(235, 235, 235);
+    color: black;
+    transition: transform 0.14s ease-in-out;
+}
+
+#opcoes > #download
+{
+    background-color: black;
+    color: rgb(235, 235, 235);
+    display: flex;
+    align-items: center;
+    transition: transform 0.14s ease-in-out;
+}
+
+#download > i
+{
+    border: 3px solid rgb(235, 235, 235);
+    border-radius: 100px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: large;
+}
+
+#opcoes > #notificacoes
+{
+    padding: 1%;
+    border-radius: 100px;
+    font-size: large;
+    background-color: #0A0A0A;
+    color: rgb(235, 235, 235);
+    display: flex;
+    align-items: center;
+    transition: transform 0.14s ease-in-out;
+}
+#user 
+{
+    width: 10%;
+    height: 10%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: transform 0.14s ease-in-out;
+}
+#user > img
+{
+    width: 3vw;
+    height: 50%;
+    border-radius: 150px;
+    border: 5px solid black;
+}
+
+
+/* Página Inicial */
+
+
+#geral
+{
+    display: flex;
+    background-color: black;
+}
+
+#hero
+{
+    width: 75%;
+    margin: 1.1% 0;
+    margin-right: 0.5%;
+    padding: 0;
+    padding-bottom: 10%;
+    font-size: 1rem;
+    color: white;
+    
+}
+
+#hero #painel-all > #title h2
+{
+    color: white;
+    font-size: 1.6rem;
+}
+
+#painel-all
+{
+    
+    padding: 1% 1.8%;
+    margin-bottom: 2%;
+}
+
+#painel-all > #title
+{
+    display: flex;
+    margin-bottom: 1%;
+
+}
+
+#painel
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-bottom: 1%;
+    
+}
+
+.elemento-painel
+{
+    background-color: rgb(30, 30, 30,80%);
+    width: 29%;
+    height: 6vh;
+    margin: 1% 0;
+    margin-right: 1.5%;
+    border-radius: 5px;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 120ms ease;
+}
+
+.elemento-painel img
+{
+    width: 3.3vw;
+    margin-right: 5%;
+    border-radius: 5px;
+}
+
+.elemento-painel h3
+{
+    width: 70%;
+}
+
+.elemento-painel:hover
+{
+    background-color: rgb(65, 65, 65,50%);
+    
+}
+
+#musicas-all, #artistas-all, #populares-all
+{
+    padding: 0 2%;
+}
+#title-musics, #title-artistas, #title-populares
+{
+    margin-bottom: 2%;
+    font-size: 0.9rem;
+}
+
+#musicas, #artistas, #populares
+{
+    display: flex;
+
+}
+
+.card
+{
+    margin-right: 1.5%;
+    background-color:#181818;
+    padding: 2%;
+    padding-bottom: 2%;
+    border-radius: 8px;
+    width: 50%;
+    margin-bottom: 1%;
+    cursor: pointer;
+    transition: background-color 120ms ease-in;
+}
+
+.card:hover
+{
+    background-color: #252525;
+}
+
+.card h3
+{
+    margin-top: 17%;
+    font-size: 1.1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card p
+{
+    margin-top: 5%;
+    color: rgb(192, 191, 191);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.card img
+{
+    width: 100%;
+    
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -10px 10px 10px rgb(22, 22, 22);
+    
+}
+
+.card  .artista
+{
+    border-radius: 100px;
+    height: auto;
+
+}
+
+#title-artistas, #title-populares
+{
+    margin: 3% 0;
+}
+
+#populares > .card > .artista
+{
+    border-radius: 100px;
+    
+}
+
+#player-all
+{
+    background-color: black;
+    color: rgb(192, 191, 191);
+    font-weight: 600;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    padding: 1% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#player-all button
+{
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+#player-all i
+{
+    color: #c0bfbf;
+    margin-left: 20px;
+}
+
+
+
+#player-all button .botao-grande
+{
+    font-size: 1.6rem;
+}
+
+#botoes > button > .aleatorio, #botoes > button > .repetir
+{
+    font-size: 1.25rem;
+}
+
+.botao-medio
+{
+    font-size: 1.4rem;
+    
+}
+
+#botoes > button > .play
+{
+    color: white;
+    font-size: 2.5rem;
+}
+
+button .like, button .repetir
+{
+    --cor: #c0bfbf;
+    color: var(--cor) !important; 
+    
+    
+}
+
+
+#player, #musica-player, #opcoes-player, #botoes
+{
+    display: flex;
+    align-items: center;
+}
+
+#musica-player
+{
+    display: flex;
+    margin-left: 1.5%;
+    max-width: 21%;
+}
+
+#musica-player img
+{
+    width: 5vw;
+    border-radius: 5px;
+}
+
+
+
+
+#infos-musica
+{
+    margin: 0 0.9rem;
+    margin-right: 10px;
+    height: 8%;
+    width: 10vw;
+}
+
+#titulo-musica
+{
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+#infos-musica > #artista
+{
+    font-size: 0.8rem;
+}
+
+#player
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#barraprogreco
+{
+    
+    background-color: rgb(124, 124, 124);
+    height: 4px;
+    width: 35vw;
+    border-radius: 10px;
+    margin-top: 1.5%;
+    cursor: pointer;
+}
+
+#barraconcluida
+{
+    height: inherit;
+    background-color: white;
+    border-radius: 10px;
+    --progresso: 0%;
+    width: var(--progresso);
+    cursor: pointer;
+    
+}
+
+#progressoContainer
+{
+    padding: 5px 0;
+    
+}
+
+#barraconcluida:hover, #volume-atual:hover
+{
+    background-color: #1DB954;
+    
+    
+}
+
+.ponteiro, .diferente
+{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-left: 0 !important;
+    margin-bottom: 10rem;
+    height: 5px;
+    font-size: 0.8rem;
+    
+}
+
+
+
+#opcoes-player
+{
+    margin-right: 3%;
+    display: flex;
+    align-items: center;
+}
+#volume-icon i
+{
+    font-size: 1.9rem;
+    margin-right: 13px;
+
+}
+#volume-base
+{
+    background-color: rgb(124, 124, 124);
+    height: 5px;
+    width: 8vw;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+
+
+#volume-atual
+{
+    height: inherit;
+    --volumeProgresso: 50%;
+    width: var(--volumeProgresso);
+    background-color: white;
+    border-radius: 10px;
+}
+
+
